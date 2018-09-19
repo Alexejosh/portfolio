@@ -2,16 +2,26 @@
 <html>
   <head>
     <title>Jalex-First-Page</title>
-    <script type= "text/javascript">
-        //var header = document.getElementById('header');
-       // window.onscroll = function(){
-        //if (window.pageYOffset >10px){
-         //   header.style.background = "rgb(21, 21, 21)";
-        //}
-       // else{
-        //    header.style.background = "rgb(121, 121, 121)";
-       // }
-       // }
+    <script>
+        var header = document.getElementById('header');
+        window.onscroll = function(){
+        if (window.pageYOffset >100){
+            header.style.background = "rgb(21, 21, 21)"; 
+        }
+        else{
+            header.style.background.color = "black";
+        }
+        }
+        $(document).ready(function() {
+            $(window).scroll(function() {
+  	         if($(document).scrollTop() > 10) {
+    	       $('#header').addClass('shrink');
+             }
+            else {
+                $('#header').removeClass('shrink');
+            }
+            });
+        });
     </script>
     <style>
         div.header {
@@ -27,6 +37,33 @@
             height: 0px;
             width: 100%; 
         }
+        div.subset{
+            margin-top: -20px;
+            margin-bottom: 0px;
+            display: inline-block; 
+            vertical-align: top;
+            
+            color: white;
+            font-family: sans-serif;
+            font-size: 10px;
+            text-align: center;
+            font-style: bold;
+        }
+        body { 
+            margin-top:0;
+            margin-right:0; 
+            margin-left:0; 
+            margin-bottom:0; 
+        } 
+        div.body{
+            background-attachment: fixed;
+            background-image: url("1234.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding-top: 15%;
+            padding-bottom: 15%;
+            
+        }
         div.title { 
             border: 0px solid black ;
             padding: 0px;
@@ -34,14 +71,18 @@
             line-height: 0px;
             width: max-width; 
             text-align: center;
+            padding-bottom:0px;
+            margin-bottom:0px;
         }
         div.title2 { 
             border: 0px solid black ;
             padding: 0px;
             margin: 0px;
-            line-height: 40px;
+            line-height: 0px;
             width: max-width; 
             text-align: center;
+            padding-top:0px;
+            margin-bottom:40px;
         }
         div.description { 
             border: 0px solid black;
@@ -53,39 +94,42 @@
             width: max-width; 
             text-align: center;
         }
-        body { 
-            margin-top:0;
-            margin-right:0; 
-            margin-left:0; 
-            margin-bottom:0; 
-        } 
-        div.subset{
-            margin-top: -20px;
-            margin-bottom: 0px;
-            display: inline-block; 
-            vertical-align: top;
+        div.button {
             border: 3px solid white ;
             color: white;
             font-family: sans-serif;
-            font-size: 10px;
+            font-size: 1.8vw;
             text-align: center;
             font-style: bold;
+            border-radius: 10px;
+            margin: auto;
+            margin-bottom:50px;
+            width: 12vw;
+            padding-left: 0px;
+            padding-right: 0px;
+            
+            height:auto;
             
         }
-        div.body{
-            background-attachment: fixed;
-            background-image: url("1234.jpg");
-            background-repeat: no-repeat;
-            //width:100%;
-            background-size: cover;
-            background-height: 100%;
-            padding-top: 15%;
-            padding-bottom: 15%;
-            
+        .button:hover {
+            background-color:white;
         }
-        div.footer {
+        div.projects {
             //border: 1px solid gray;
-            background-color: gray;
+            padding: 30px;
+            margin: 0px;
+            margin-top: 0px;
+            //height: px;
+            width: max-width; 
+        }
+        div.info{
+            padding: 30px;
+            margin: 0px;
+            margin-top: 0px;
+            //height: px;
+            width: max-width; 
+        }
+        div.blank{
             padding: 30px;
             margin: 0px;
             margin-top: 0px;
@@ -94,67 +138,95 @@
         }
         
         #header{
-            background: rgb(71, 71, 71);
-        }
-        #home:hover {
-            background-color:white;
-            color:black;
-        }
-        #nextPage:hover {
-            background-color:white;
-            color:black;
-        }
-        #nextestPage:hover {
-            background-color:white;
-            color:black;
-        }
-        #title {
-            color:white;
-            font-style: bold;
-            font-family: verdana;
-            font-size: 8vw;
-        }
-        #title2 {
-            color:rgb(234, 234, 234);
-            font-style: italic;
-            font-family: verdana;
-            font-size: 2vw;
-        }
-        #des {
-            color:rgb(178, 178, 178);
-            //font-style: ;
-            font-family: verdana;
-            font-size: 1.4vw;
+            background-color: transparent;
         }
         #home {
-            border-radius: 10px;
+            border: 2px solid white;
+            border-radius: 6px;
             margin-left: -20px;
             margin-right: 5px;
             width: 100px;
         }
         #nextPage {
-            border-radius: 10px;
+            border-radius: 6px;
             margin-right: 5px;
             width: 100px;
         }
         #nextestPage {
-            border-radius: 10px;
+            border-radius: 6px;
             margin-right: 5px;
             width: 100px;
+        }
+        #home:hover {
+            border: 2px solid;
+            //background-color:white;
+            border-color:lightgray;
+            color:lightgray;
+        }
+        #nextPage:hover {
+            border: 2px solid;
+            //background-color:white;
+            border-color:lightgray;
+            color:lightgray;
+        }
+        #nextestPage:hover {
+            border: 2px solid;
+            //background-color:white;
+            border-color:lightgray;
+            color:lightgray;
+        }
+        #title {
+            color:white;
+            font-style: bold;
+            font-family: verdana;
+            font-size: 7vw;
+        }
+        #title2 {
+            color:rgb(234, 234, 234);
+            font-style: italic;
+            font-family: monospace;
+            font-size: 2vw;
+        }
+        #des {
+            color:rgb(220, 220, 220);
+            //font-style: ;
+            font-family: verdana;
+            font-size: 1.4vw;
+            font-weight:600;
+        }
+        #projects{
+            background-color: white;
+        }
+        #projectsTitle{
+            font-size: 4vw;
+            font-family:monospace;
+        }
+        #info{
+            background-color: transparent;
+        }
+        #infoTitle{
+            font-size: 4vw;
+            font-family:monospace;
+        }
+        #blank{
+            background-color:white;
+        }
+        #blankTitle{
+            font-size: 4vw;
+            font-family:monospace;
         }
     </style>
   </head>
   <body>
-   
     <div class="header" id="header">
         <div class="subset" id="home">
             <h2>Home</h2>
         </div>
         <div class="subset" id="nextPage">
-            <h2>Next Page</h2>
+            <h2>About</h2>
         </div>
         <div class="subset" id="nextestPage">
-            <h2>Nextest Page</h2>
+            <h2>More</h2>
         </div>
     </div>
     <div class="body">
@@ -165,11 +237,24 @@
             <h3 id= "title2">Joshua Alex</h3>
         </div>
         <div class="description">
-            <p id="des">Just a first site. Made on September 16th. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. </p>
+            <p id="des">This is my first website. Made on September 16th. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. </p>
         </div>
-   </div>
-    <div class="footer">
-        <p>Footer. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. </p>
-    </div>
-  </body>
+        <div class="button">
+            <p>Learn More</p>
+        </div>
+  
+        <div class="projects" id="projects">
+            <h2 id="projectsTitle">Projects</h2>
+            <p>Insert projects here. //This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. </p>
+        </div>
+        <div class="info" id="info">
+            <h2 id="infoTitle">Info</h2>
+            <p>info</p>
+        </div>
+        <div class="blank" id="blank">
+            <h2 id="blankTitle">Blank</h2>
+            <p>blank</p>
+        </div>
+      </div>
+</body>
 </html>
