@@ -82,7 +82,7 @@
             width: max-width; 
             text-align: center;
             padding-top:0px;
-            margin-bottom:40px;
+            margin-bottom:50px;
         }
         div.description { 
             border: 0px solid black;
@@ -90,9 +90,10 @@
             padding-left: 70px;
             padding-right: 70px;
             margin: 0px;
-            line-height: 20px;
+            line-height: auto;
             width: max-width; 
             text-align: center;
+            margin-bottom:30px;
         }
         div.button {
             border: 3px solid white ;
@@ -103,7 +104,7 @@
             font-style: bold;
             border-radius: 10px;
             margin: auto;
-            margin-bottom:50px;
+            margin-bottom:90px;
             width: 12vw;
             padding-left: 0px;
             padding-right: 0px;
@@ -122,6 +123,20 @@
             //height: px;
             width: max-width; 
         }
+        .projectName{
+            margin-top:5px;
+            margin-bottom:3px;
+            font-size: 2.3vw;
+            font-family: sans-serif;
+            font-weight: bolder;
+        }
+        .projectLink{
+            font-size: 1.9vw;
+        }
+        .projectLink:hover{
+            font-weight: bold;
+            color:orange;
+        }
         div.info{
             padding: 30px;
             margin: 0px;
@@ -133,9 +148,28 @@
             padding: 30px;
             margin: 0px;
             margin-top: 0px;
-            //height: px;
+            //height: 100px;
             width: max-width; 
         }
+        div.preGallery{
+            height: 300px;
+        }
+        div.gallery {
+            margin: 5px;
+            border: 1px solid #ffffff;
+            float: left;
+            width: 180px;
+        }
+
+        div.gallery:hover {
+            border: 1px solid #777;
+        }
+
+        div.gallery img {
+            width: 100%;
+            height: auto;
+        }
+
         
         #header{
             background-color: transparent;
@@ -191,7 +225,7 @@
             color:rgb(220, 220, 220);
             //font-style: ;
             font-family: verdana;
-            font-size: 1.2vw;
+            font-size: 1.7vw;
             font-weight:600;
         }
         #projects{
@@ -201,10 +235,19 @@
             font-size: 4vw;
             font-family:monospace;
         }
+        #pInSections{
+            font-size: 2.5vw;
+        }
+        #pInSections2{
+            font-size: 2.5vw;
+            color:rgb(220, 220, 220);
+            font-weight:600;
+        }
         #info{
             background-color: transparent;
         }
         #infoTitle{
+            color: white;
             font-size: 4vw;
             font-family:monospace;
         }
@@ -237,7 +280,7 @@
             <h3 id= "title2">Joshua Alex</h3>
         </div>
         <div class="description">
-            <p id="des">This is my first website. Made on September 16th. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. </p>
+            <p id="des">This is my first website. Made on September 16th. Made this in Advanced Comp Sci. I thought about copying and pasting one of my essays in here becasue I didnt know what to write, but then I reliezed it would be too long so sI didnt, and then I reliezed this is a runon sentence, so ill end this one now. If you want 40% off halifornia products hit me up ill find you my code, i dont know why I just thought of that but if I can make money off of this i might as well. It's raining like hurricane Florence out here right now so I suggest you stay inside. and drive safe. The next paragraph will be about the school parking lot. </p>
         </div>
         <div class="button">
             <p>Learn More</p>
@@ -245,15 +288,58 @@
   
         <div class="projects" id="projects">
             <h2 id="projectsTitle">Projects</h2>
-            <p>Insert projects here. //This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. </p>
+            <p id="pInSections">Projects I've created through my time in CompSci classes at Rosemount High School.</p>
+            <dl>
+                <dt class="projectName">Brick Breaker</dt>
+                    <dd class="projectLink">www.linktobrickbreaker.com</dd>
+                <dt class="projectName">Jalex Photography</dt>
+                    <dd class="projectLink">jalexphotography.weebly.com</dd>
+                <dt class="projectName">My Next Project</dt>
+                    <dd class="projectLink">www.mynextproject.com</dd>
+            </dl>
         </div>
         <div class="info" id="info">
             <h2 id="infoTitle">Info</h2>
-            <p>info</p>
+            <p id="pInSections2">Alright, so for the school parking lot you should know I strongly disaprove it. They destroyed the efficiency of the parking lot with this new adaptation. I took me 15 minutes to get to school yeasterday. THAT'S CRAZY. last year I was able to leave at 2:25 from my house and be sitting in class by 7:30/31 it was goat back then. This new time and made me so mad and is dangerous the line for HWY 3 started starting on connemerra thats where i live so pretty much the lin starts at my house. How do you not hate getting out of your driveway and being in traffic instantly. ITS CRAZY.</p>
         </div>
         <div class="blank" id="blank">
-            <h2 id="blankTitle">Blank</h2>
-            <p>blank</p>
+            <h2 id="blankTitle">Photographs</h2>
+            <div class="preGallery"> 
+                <div class="gallery">
+                <a target="_blank" href="DSC_1736.JPG">
+                    <img src="DSC_1736.JPG" alt="5Terre" width="600" height="400">
+                </a>
+                
+                </div>
+                <div class="gallery">
+                <a target="_blank" href="DSC_5918.01_01.jpg">
+                    <img src="DSC_5918.01_01.jpg" alt="Forest" width="600" height="400">
+                </a>
+               
+                </div>
+                <div class="gallery">
+                <a target="_blank" href="footbrigde remastered.jpg">
+                    <img src="footbrigde remastered.jpg" alt="Northern Lights" width="600" height="400">
+                </a>
+                
+                </div>
+                <div class="gallery">
+                <a target="_blank" href="gmf.jpg">
+                    <img src="gmf.jpg" alt="Mountains" width="600" height="400">
+                </a>
+                
+                </div>
+                <div class="gallery">
+                <a target="_blank" href="DSC_0629.jpg">
+                    <img src="DSC_0629.jpg" alt="Mountains" width="600" height="400">
+                </a>
+                
+                </div>
+                <div class="gallery">
+                <a target="_blank" href="chistarssky.jpeg">
+                    <img src="chistarssky.jpeg" alt="Mountains" width="600" height="400">
+                </a>
+            </div>
         </div>
       </div>
 </body>
